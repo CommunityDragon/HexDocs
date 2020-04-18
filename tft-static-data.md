@@ -6,7 +6,7 @@ There is currently no static content that is automatically built for each patch 
 [set3.zip](https://static.developer.riotgames.com/docs/tft/set3.zip) contains static data for traits, champions, items, and galaxies.
 
 ### Traits
-```json
+```
 [
   {
     "key": "Set3_Blademaster", // name used for traits in tft-match-v1
@@ -35,7 +35,7 @@ There is currently no static content that is automatically built for each patch 
 ```
 
 ### Champions
-```json
+```
 [
   {
     "name": "Ahri",
