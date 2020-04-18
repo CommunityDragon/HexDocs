@@ -1,3 +1,9 @@
+---
+title: "Match History"
+authors: "@SKarajic"
+tags: ""
+markers: "tft-marker"
+---
 # Match History
 ## Best Practices
 To best utilize TFT match history there are two things to keep in mind; match history is still evolving and fresh data is cheaper.
