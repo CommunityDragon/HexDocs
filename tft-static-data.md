@@ -2,7 +2,7 @@
 There is currently no static content that is automatically built for each patch of Teamfight Tactics. Many of the assets from Teamfight Tactics can be gathered from League of Legends' [Data Dragon](https://developer.riotgames.com//docs/lol#data-dragon). Below you can find some basic static data for Teamfight Tactic sets.
 
 ## Current Set
-**Galaxies**
+**Galaxies** <br>
 [set3.zip](https://static.developer.riotgames.com/docs/tft/set3.zip) contains static data for traits, champions, items, and galaxies.
 
 ### Traits
