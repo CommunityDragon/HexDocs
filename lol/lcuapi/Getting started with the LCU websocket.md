@@ -12,7 +12,7 @@ This guide assumes that you have basic knowledge about the LCU API. Check out ou
 
 ---
 
-The LCU websocket uses the WAMP 1.0 protocol on this websocket. An example implementation in JavaScript can be found [over here](https://gist.github.com/Pupix/eb662b1b784bb704a1390643738a8c15).
+The LCU websocket uses the WAMP 1.0 protocol on this websocket. An example implementation written by Pupix can be found [over here](https://gist.github.com/Pupix/eb662b1b784bb704a1390643738a8c15).
 
 ## Connecting to the socket
 
