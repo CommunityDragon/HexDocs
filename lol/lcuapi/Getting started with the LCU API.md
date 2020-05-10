@@ -6,7 +6,7 @@ markers: "generic"
 ---
 # Getting started with the LCU API
 
-Ever since the new client came out and people found out that the League Client Update has a REST API that you can talk to, people have been hard at work figuring out what kind of amazing features they can make to supplement the out of game experience. Do you have a tool in mind but don't know how you can talk to this API? This guide will show you how you can connect to this API, what endpoints are available and it'll include a short `things to know before getting started` section to make sure you know what you're getting into.
+Ever since the new client came out and people found out that the League Client Update has a REST API that you can talk to, people have been hard at work figuring out what kind of amazing features they can make to supplement the out of game experience. This guide will show you how you can connect to this API, what endpoints are available and it'll include a short `things to know before getting started` section to make sure you know what you're getting into.
 
 ---
 
@@ -21,7 +21,7 @@ With these out of the way, let's get started!
 
 ## Getting the port number and the password
 
-As I said, the LCU API runs on your computer alongside many other programs so rather than using a fixed port and risking it not being available, the LCU just asks the operating system for an available port instead which means we're gonna have to find that port number. We have 2 solutions to that problem (both of them are going to cover the port number as well as the password):
+The LCU API runs on your computer alongside many other programs so rather than using a fixed port and risking it not being available, the LCU just asks the operating system for an available port instead which means we're gonna have to find that port number. We have 2 solutions to that problem (both of them are going to cover the port number as well as the password):
 
 ### The lockfile method
 
@@ -63,7 +63,7 @@ As I said before, the LCU API is completely unsupported so you shouldn't expect 
 
 ### Connecting
 
-The LCU API uses [HTTP Basic](https://en.wikipedia.org/wiki/Basic_access_authentication) authentication to further ensure nobody messes your account up. The username is a constant, it's `riot` and the password changes with every client restart (alongside the port). HTTP Basic authentication BASICally concatenates the username, a colon and the password into a string and encodes it using base64. So the string `riot:password` becomes `cmlvdDpwYXNzd29yZA==`, let's put that into a header named `Authorization` and give it the value `Basic cmlvdDpwYXNzd29yZA==` to have a nice auth header. This is all you need to connect to the LCU API.
+The LCU API uses [HTTP Basic](https://en.wikipedia.org/wiki/Basic_access_authentication) authentication as a second layer of defense. The username is a constant, it's `riot` and the password changes with every client restart (alongside the port). HTTP Basic authentication BASICally concatenates the username, a colon and the password into a string and encodes it using base64. So the string `riot:password` becomes `cmlvdDpwYXNzd29yZA==`, let's put that into a header named `Authorization` and give it the value `Basic cmlvdDpwYXNzd29yZA==` to have a nice auth header. This is all you need to connect to the LCU API.
 
 Here's a basic example showing all HTTP headers:
 
@@ -85,4 +85,4 @@ Here's a basic example showing all HTTP headers:
 
 ## Conclusion
 
-That's all she wrote! You now understand how to find the port and the password to be able to connect to the LCU API. Now go and make awesome stuff using this knowledge! Can't wait to test out your creation myself! :)
+That's all she wrote! With this knowledge, you should be able to find the port and the password to the LCU API and you're able to make requests to it. If you have any questions, feel free to join Riot's 3rd party developer community on discord and ask your question there. There are a lot of knowledgeable members who are willing to answer them!
