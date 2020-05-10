@@ -6,7 +6,7 @@ markers: "generic"
 ---
 # Getting started with the LCU websocket
 
-In LCU land, rather than the UX process constantly polling the LCU endpoints to see if anything has changed, the LCU API also hosts a websocket allowing the UI to be notified about changes (like you receiving a friend request or a chat message). This guide will show you how you can interact with this websocket to receive notifications that might be needed for your app (like champion select events or winning/losing).
+Alongside the LCU REST API, the League Client Architecture uses a websocket connection to communicate changes from the LCU itself to the UX process to be shown to you (for example a friend request or a chat message you receive). This guide will show you how to connect to this websocket and request a notification about state changes.
 
 This guide assumes that you have basic knowledge about the LCU API. Check out our other guide to help you get started.
 
@@ -55,6 +55,4 @@ Keep in mind that you'll receive an event twice if you subscribe to both `OnJson
 
 ## Conclusion
 
-That's it! Not a difficult thing to accomplish. The only thing making it difficult is the unsupported nature of the LCU API. 
-
-Good luck with your project! Can't wait to test them out myself! :)
+That's it! With this knowledge, you should be able to build reactive apps more easily compared to periodically polling the LCU API. If you have any questions, feel free to join Riot's 3rd party developer community on discord and ask your question there. There are a lot of knowledgeable members who are willing to answer them!
