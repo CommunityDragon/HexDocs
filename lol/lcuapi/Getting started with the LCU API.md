@@ -26,8 +26,10 @@ The LCU API runs on your computer alongside many other programs so rather than u
 ### The lockfile method
 
 When the client launches, it'll generate a file named `lockfile` in its installation directory (usually the C drive on Windows and the Applications folder on Mac **but it can change!**). If you happen to know the install location of League, you can proceed with this method, but I wouldn't recommend it due to the other method doing the same thing without asking the user to locate the install directory.
-The lockfile consist of one line and it has 5 different pieces of data separated by the colon character. It looks something like this:
+The lockfile consist of one line and it has 5 different pieces of data separated by the colon character. 
+`Process Name : Process ID : Port : Password : Protocol`
 
+It looks something like this:
 ```
 LeagueClient:12345:54321:password:https
 ```
