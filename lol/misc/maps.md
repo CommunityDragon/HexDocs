@@ -5,7 +5,7 @@ tags: "maps,map" # A comma separated list of the tags this document has
 markers: "generic" # A comma separated list of all the markers this document has
 ---
 
-__Disclaimer__ : this article consists mostly in the old doc from the official dev portal :
+**Disclaimer** : this article consists mostly in the old doc from the official dev portal :
 https://web.archive.org/web/20190629194440/https://developer.riotgames.com/game-constants.html
 
 ## Match Timeline Data Position Values
