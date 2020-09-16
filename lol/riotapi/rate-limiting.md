@@ -40,19 +40,31 @@ If a call exceeds the app or service rate limit for a given period of time, then
 <div id="application-headers"></div>
 
 #### Application Rate Limit Headers 
-The `X-App-Rate-Limit` and `X-App-Rate-Limit-Count` headers will be included in the response for all API calls that enforce an application rate limit. For example, calls to the lol-static-data-v1.2 endpoints will not include this header in the response because calls to that API are not rate limited. The `X-App-Rate-Limit` header contains a comma-separated list of each of the overall rate limits associated with your API key (most people have two; a 10 second rate limit and a 10 minute rate limit). The value of the header contains each of your API key's rate limits in a comma separated list. For each rate limit bucket, the value includes the number of calls your API key is allowed to make during that bucket and the duration of the bucket in seconds, separated by a colon. The `X-App-Rate-Limit-Count` header is very similar. The only difference is that for each rate limit bucket, the value includes the number of calls your API key has already made during that bucket, instead of the number of calls it is allowed to make. For example, let's say you have the following rate limits: * 100 calls per 1 second * 1,000 calls per 10 seconds * 60,000 calls per 10 minutes (600 seconds) * 360,000 calls per 1 hour (3,600 seconds) When you make your first call, the `X-App-Rate-Limit` and `X-App-Rate-Limit-Count` headers will contain the following.
+The `X-App-Rate-Limit` and `X-App-Rate-Limit-Count` headers will be included in the response for all API calls that enforce an application rate limit. For example, calls to the lol-static-data-v1.2 endpoints will not include this header in the response because calls to that API are not rate limited. The `X-App-Rate-Limit` header contains a comma-separated list of each of the overall rate limits associated with your API key (most people have two; a 10 second rate limit and a 10 minute rate limit). The value of the header contains each of your API key's rate limits in a comma separated list. For each rate limit bucket, the value includes the number of calls your API key is allowed to make during that bucket and the duration of the bucket in seconds, separated by a colon. The `X-App-Rate-Limit-Count` header is very similar. The only difference is that for each rate limit bucket, the value includes the number of calls your API key has already made during that bucket, instead of the number of calls it is allowed to make. For example, let's say you have the following rate limits: 
+* 100 calls per 1 second * 1,000 calls per 10 seconds 
+* 60,000 calls per 10 minutes (600 seconds) 
+* 360,000 calls per 1 hour (3,600 seconds) 
 
-<pre>**X-App-Rate-Limit:** 100:1,1000:10,60000:600,360000:3600 **X-App-Rate-Limit-Count:** 1:1,1:10,1:600,1:3600</pre>
+When you make your first call, the `X-App-Rate-Limit` and `X-App-Rate-Limit-Count` headers will contain the following.
+
+```
+X-App-Rate-Limit: 100:1,1000:10,60000:600,360000:3600 
+X-App-Rate-Limit-Count: 1:1,1:10,1:600,1:3600
+```
 
 If you make a second call (3 seconds later) the X-App-Rate-Limit-Count header will return the following.
 
-<pre>**X-App-Rate-Limit:** 100:1,1000:10,60000:600,360000:3600
-**X-App-Rate-Limit-Count:** 1:1,2:10,2:600,2:3600</pre>
+```
+X-App-Rate-Limit: 100:1,1000:10,60000:600,360000:3600
+X-App-Rate-Limit-Count: 1:1,2:10,2:600,2:3600
+```
 
 Notice how the first rate limit has reset because its time window is 1 second and how the second call still counts toward the other three rate limits. Here's another example.
 
-<pre>**X-App-Rate-Limit:** 1000:10,60000:600
-**X-App-Rate-Limit-Count:** 450:10,2000:600</pre>
+```
+X-App-Rate-Limit: 1000:10,60000:600
+X-App-Rate-Limit-Count: 450:10,2000:600
+```
 
 The `X-App-Rate-Limit` header in this example shows this API key has a rate limit of 1,000 calls per 10 seconds and 60,000 calls per 600 seconds. The `X-App-Rate-Limit-Count` header shows that 450 API calls were made within the 10 second rate limit window and 2,000 API calls were made within the 10 minute (600 second) rate limit window. 
 
