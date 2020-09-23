@@ -10,6 +10,8 @@ markers: "generic" # A comma separated list of all the markers this document has
 
 Following the shutdown of some important API from the lolesports website that allowed us to get hashes to gather data from official matches, the solution is to rely on Leaguepedia which has everything we need.
 
+Here is an example how to do it in Python.
+
 We will use the [leaguepdia-parser](https://pypi.org/project/leaguepedia-parser/) package to gather what we need from Leaguepedia.
 
 ## Find the tournament
@@ -168,7 +170,7 @@ For that, you will need to :
  * Find the request header
  * Copy the value of the Cookie header
 
-![ACS header](http://canisback.com/images/acs.png)
+![ACS header](https://canisback.com/images/acs.png)
 
 Paste this value in here : 
 
@@ -228,3 +230,5 @@ all_games_data[0]["participantIdentities"]
 
 
 Now you have all the match data you need, in the same format as the Riot Games API matches.
+
+[Source notebook](https://canisback.com/notebooks/lolesports.ipynb)
