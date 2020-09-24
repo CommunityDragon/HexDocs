@@ -12,7 +12,7 @@ Following the shutdown of some important API from the lolesports website that al
 
 Here is an example how to do it in Python.
 
-We will use the [leaguepdia-parser](https://pypi.org/project/leaguepedia-parser/) package to gather what we need from Leaguepedia.
+We will use the [leaguepedia-parser](https://pypi.org/project/leaguepedia-parser/) package to gather what we need from Leaguepedia.
 
 ## Find the tournament
 
