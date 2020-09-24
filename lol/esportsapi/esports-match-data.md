@@ -162,9 +162,9 @@ ACS is highly rate limited and you might need to authenticate yourself to avoid 
 
 For that, you will need to : 
  * Open your browser
- * Log in League of Legends website (or any one dependent on Riot log in)
+ * Log in on the League of Legends website (or any one dependent on Riot log in)
  * Open an acs link (e.g. https://acs.leagueoflegends.com/v1/stats/game/ESPORTSTMNT06/1070986?gameHash=1787d1ea36a382c3 )
- * Right clic -> Inspect element
+ * Right click -> Inspect element
  * Network tab
  * Select the first item in the network list (might need a refresh with the tab open)
  * Find the request header
