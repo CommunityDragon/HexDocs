@@ -18,10 +18,9 @@ We will use the [leaguepedia-parser](https://pypi.org/project/leaguepedia-parser
 
 
 ```python
-import leaguepedia_parser
+import leaguepedia_parser as lp
 
-lp = leaguepedia_parser.LeaguepediaParser()
-lp.get_tournament_regions()
+lp.get_regions()
 ```
 
 
