@@ -24,7 +24,7 @@ It's probably not worth developing a project that they will reject, so you'll al
 The Riot API uses different hosts based on the region you are accessing.
 
 ### Platform Routing Values
-Platform routing is used for a League of Legends endpoints other than the Tournament API endpoints.
+Platform routing is used for all League of Legends endpoints other than the Tournament API endpoints.
 
 |Region Code|Platform|Host
 |--|--|--|
@@ -58,7 +58,7 @@ Now that we know where we are routing our requests, we will need to authenticate
 If you haven't already go to your [dashboard](https://developer.riotgames.com/) and generate a developer API Key. You will need to generate a new key every 24 hours. If you have already had an application approved you can use the API key from the app page.
 
 ### Authentication via Headers
-The Riot API accepts your API key via headers. This is the cleaner method to authenticating.
+The Riot API accepts your API key via headers. This is the cleaner method to authenticate.
 The header is `X-Riot-Token`
 For example:
 
@@ -78,6 +78,7 @@ The API uses 3 types of IDs. These are summoner IDs, account IDs, and PUUIDs. Di
 IDs are encrypted on a per application basis. Your development application is considered an application. This means if you have any IDs stored from your development application you will have to grab them again if you get an approved personal/production application.
 
 ### Types of IDs
+
 **Summoner ID:** Regionally unique ID of a summoner. 
 **Account ID:** Regionally unique ID of an account.
 **PUUID:** Globally unique ID of an account.
