@@ -79,9 +79,9 @@ IDs are encrypted on a per application basis. Your development application is co
 
 ### Types of IDs
 
-**Summoner ID:** Regionally unique ID of a summoner. 
-**Account ID:** Regionally unique ID of an account.
-**PUUID:** Globally unique ID of an account.
+- **Summoner ID:** Regionally unique ID of a summoner. 
+- **Account ID:** Regionally unique ID of an account.
+- **PUUID:** Globally unique ID of an account.
 
 Now you might ask, if PUUID is globally unique, why isn't it used on all endpoints? The back end for V4 was made before they released PUUID, all their newer games use it, so it will likely be used for all endpoints in V5. For now if you need to track players across regions you will have to call Summoner-V4 and store their PUUID.
 
