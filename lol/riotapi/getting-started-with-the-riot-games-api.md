@@ -65,7 +65,7 @@ For example:
     "X-Riot-Token": "RGAPI-b529Ax3f-3Y13-4A9d-a9Y2-10Ab9ecc8494"
 
 ### Authentication via Query Parameter
-The Riot API also accept your API as a query parameter to the URL. This can become trickier as you may need to add extra query parameters to the URL as well.
+The Riot API also accepts your API as a query parameter to the URL. This can become trickier as you may need to add extra query parameters to the URL as well.
 The query parameter is `api_key`
 An example URL authenticating by query parameter:
 
@@ -156,25 +156,29 @@ These are community made and most have detailed guides on how to use the library
 ---
 
 ## Applications
-Starting with the Riot API you will have a developer application. This API key expires every 24 hours. This is okay for development, but once you want to release your project you'll need something permanent.
+Starting with the Riot API you will have a developer application. This API key expires every 24 hours. This is okay for development, but once you want to release your project you'll need something permanent. Personal keys and Production keys do not expire.
 
 Note: It is against developer policies to use a development key in production. It is irrelevant how long it takes to get approval, your application will be denied if they catch you using your development key in this manner.
 
 ### Personal Application
 A personal application is for something that you are only using for yourself. This means you are controlling who has access. This would be ideal for a school project or a discord bot for your own server.
 
-Personal Applications have the same rate limits as your development application, if you higher rate limits or if you plan on sharing your application you will have to apply for a production application.
+Personal Applications have the same rate limits as your development application, if you require higher rate limits or if you plan on sharing your application you will have to apply for a production application.
 
 ### Production Application
 A production application is for shareable applications. Production applications can vary in rate limits based on what Riot thinks your application needs to function.
 
-Production applications need a website describing what the application does to function. If this is a web application you are already set. If not you can make a site using [GitHub Pages](https://pages.github.com/) or similar. You'll want to include screenshots and a description of what your application does so they can verify you are not leaking your API key or breaking policies.
+Production applications need a website describing what the application does to function. If this is a web application you are already set. If not, you can make a site using [GitHub Pages](https://pages.github.com/) or similar. You'll want to include screenshots and a description of what your application does so they can verify you are not leaking your API key or breaking policies.
 
 ### Application Process
-Once you have finalized your idea you can apply for the type of application you need. Make sure you detail your application as best as you can. This will allow Riot to understand exactly what you are trying to achieve. The more built your prototype is, the better chance at better rate limits you have.
+Once you have finalized your idea, you can apply for the type of application you need. Make sure you detail your application as best as you can. This will allow Riot to understand exactly what you are trying to achieve. The more built your prototype is, the better chance at better rate limits you have.
 
 You can apply [here](https://developer.riotgames.com/app-type).
 
 If you ever question whether or not something is allowed, you can submit an application and get Riot approval even if you don't have something built.
 
 Current response time is around 20 business days but can vary due to other external factors at Riot. With that being said make sure you apply with plenty of time before your release date.
+
+If you have questions specifically about your application, you can ask Riot directly in the Messages tab of your application. This includes questions about Rate Limits.
+
+Have further questions? Feel free to ask in the [developer discord](https://discord.gg/riotgamesdevrel).
