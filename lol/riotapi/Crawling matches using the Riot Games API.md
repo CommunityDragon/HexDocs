@@ -18,7 +18,7 @@ For the approval process, we recommend using mock data to simulate the behavior 
 
 As for development, we recommend getting enough matches where you're completely able to oversee everything that goes into each of the endpoints (fetching participants, fetching matchlists, etc..) but not going as far as waiting hours for matches to flow in.
 
-## Method 1: Using league-v4 in conjuction with match-v4
+## Method 1: Using league-v4 in conjunction with match-v4
 
 League-v4 has a really powerful endpoint called [getLeagueEntries](https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntries) that allows you to fetch every single ranked player in a given division. All you need to do is call `/lol/league/v4/entries/{queue}/{tier}/{division}` and paginate over each division you're interested in, fetch the accountId of each individual summoner and using the matchlist endpoint and getMatch, you should see all the matches pouring in.
 
