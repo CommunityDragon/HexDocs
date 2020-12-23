@@ -21,7 +21,7 @@ Example in Javascript on how to use maps and positions : http://jsfiddle.net/ow4
 | Nexus Blitz |  https://ddragon.leagueoflegends.com/cdn/10.18.1/img/map/map21.png <br /><img src="https://ddragon.leagueoflegends.com/cdn/10.18.1/img/map/map21.png" width=512px/>| |
 
 
-Additionnally, list of buildings : 
+Additionally, list of buildings : 
 
 Summoner's Rift : 
 ```
