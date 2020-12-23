@@ -76,6 +76,7 @@ We will create a custom method for the leaguepedia_parser to get only the inform
 
 ```python
 import types
+from leaguepedia_parser.site.leaguepedia import leaguepedia
 
 def get_games_hashes(self, tournament_name=None, **kwargs):
     """
@@ -86,7 +87,7 @@ def get_games_hashes(self, tournament_name=None, **kwargs):
     :return:
                 A list of game dictionaries.
     """
-    games = self._cargoquery(tables='ScoreboardGames',
+    games = leaguepedia.query(tables='ScoreboardGames',
                              fields='Tournament = tournament, '
                                     'MatchHistory = match_history_url, ',
                              where="ScoreboardGames.Tournament='{}'".format(tournament_name),
